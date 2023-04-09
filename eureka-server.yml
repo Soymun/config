@@ -1,14 +1,14 @@
 spring:
   application:
     name: eureka-server
-  boot:
-    admin:
-      context-path: /admin
+#  boot:
+#    admin:
+#      context-path: /admin
 server:
   port: 8070
 eureka:
   instance:
-    hostname: eurekaserver
+    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
@@ -18,9 +18,9 @@ eureka:
     waitTimeInMsWhenSyncEmpty: 5
       
       
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
    
