@@ -15,7 +15,12 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://eurekaserver:8070/eureka/
-      
+spring:
+  cloud:
+    gateway:
+      discovery.locator:
+        enabled: true
+        lowerCaseServiceId: true
 #spring:
 #  zipkin:
 #    baseUrl: http://zipkin:9411
