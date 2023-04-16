@@ -14,20 +14,20 @@ eureka:
 spring:
   cloud:
     loadbalancer.ribbon.enabled: false
-#    gateway:
-#      routes:
-#        - id: organization-service
-#          uri: lb://organization-service
-#          predicates:
-#            - Path=/organization/**
-#          filters:
-#            - RewritePath=/organization/(?<path>.*), /$\{path}
-#        - id: licensing-service
-#          uri: lb://licensing-service
-#          predicates:
-#            - Path=/license/**
-#          filters:
-#            - RewritePath=/license/(?<path>.*), /$\{path}
+    gateway:
+      routes:
+        - id: author-service
+          uri: lb://author-service
+          predicates:
+            - Path=/author/**
+          filters:
+            - RewritePath=/author/(?<path>.*), /$\{path}
+        - id: book-service
+          uri: lb://book-service
+          predicates:
+            - Path=/book/**
+          filters:
+            - RewritePath=/book/(?<path>.*), /$\{path}
 
 
 
