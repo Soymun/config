@@ -33,7 +33,10 @@ spring:
           filters:
             - RewritePath=/book/(?<path>.*), /$\{path}
 
-
+jwt:
+  provider:
+    security: soymun
+    validate: 3600000
 
 management:
   endpoints:
