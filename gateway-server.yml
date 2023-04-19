@@ -38,6 +38,12 @@ spring:
             - Path=/account/**
           filters:
             - RewritePath=/account/(?<path>.*), /$\{path}
+        - id: file-service
+          uri: lb://file-service
+          predicates:
+            - Path=/file/**
+          filters:
+            - RewritePath=/file/(?<path>.*), /$\{path}
 
 jwt:
   provider:
