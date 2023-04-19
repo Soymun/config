@@ -33,11 +33,11 @@ spring:
           filters:
             - RewritePath=/book/(?<path>.*), /$\{path}
         - id: account-service
-            uri: lb://account-service
-            predicates:
-              - Path=/account/**
-            filters:
-              - RewritePath=/account/(?<path>.*), /$\{path}
+          uri: lb://account-service
+          predicates:
+            - Path=/account/**
+          filters:
+            - RewritePath=/account/(?<path>.*), /$\{path}
 
 jwt:
   provider:
